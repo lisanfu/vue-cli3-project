@@ -41,9 +41,9 @@
     "vue-template-compiler": "^2.6.14"
   },
   "lint-staged": {
-    "./**/*.{js}": [
-        "lint --fix",
-        "git add"
+    "./**/*.js": [
+        "eslint --fix",
+        "git add ."
     ]
 }
 }
