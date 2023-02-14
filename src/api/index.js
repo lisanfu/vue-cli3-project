@@ -53,7 +53,6 @@ service.interceptors.response.use(response => {
     if (!error.response) {
         // 请求超时状态
         if (error.message.includes('timeout')) {
-            console.log('超时了')
             Message.error('请求超时，请检查网络是否连接正常')
         } else {
             // 可以展示断网组件
