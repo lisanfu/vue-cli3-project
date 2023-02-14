@@ -1,21 +1,15 @@
 <template>
-    <div class="main">
-        hello
-    </div>
+  <div class="main">hello work</div>
 </template>
 
 <script>
-
 export default {
     name: 'Index-Page',
     data () {
-        return {
-        }
+        return {}
     },
-    methods: {
-    }
+    methods: {}
 }
 </script>
 
-  <style lang="scss" scoped>
-  </style>
+<style lang="scss" scoped></style>

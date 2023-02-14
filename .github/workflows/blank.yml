@@ -30,7 +30,7 @@ jobs:
         with:
           path: |
             **/node_modules
-            key: ${{runner.OS}}-${{hashFiles('**/yarn.lock')}}
+          key: ${{runner.OS}}-${{hashFiles('**/yarn.lock')}}
       - name: Installing Depenencies
         if: steps.cache-dependencies.outputs.cache-hit!='true'
         run: yarn install
