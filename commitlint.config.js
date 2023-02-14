@@ -1,5 +1,4 @@
 module.exports = {
-    // eslint-disable-next-line indent
     // 继承的规则
     extends: ['@commitlint/config-conventional'],
     // 定义规则类型
