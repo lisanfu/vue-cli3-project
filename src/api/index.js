@@ -18,7 +18,6 @@ service.interceptors.request.use(config => {
     // loading = Loading.service({
     //     text: '正在加载中......'
     // })
-    console.log(config)
     const token = localStorage.getItem('token')
     if (token) {
         config.headers.Authorization = token
