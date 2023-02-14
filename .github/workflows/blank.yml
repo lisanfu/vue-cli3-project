@@ -24,7 +24,16 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
+      - name: Cache
+        id: cache-dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            **/node_modules
+            key: ${{runner.OS}}-${{hashFiles('**/yarn.lock')}}
+      - name: Installing Depenencies
+        if: steps.cache-dependencies.outputs.cache-hit!='true'
+        run: yarn install
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: yarn

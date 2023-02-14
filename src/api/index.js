@@ -62,8 +62,7 @@ service.interceptors.response.use(response => {
         return
     }
     // 服务器返回不是 2 开头的情况，会进入这个回调
-    // 可以根据后端返回的状态码进行不同的操作
-    // const responseCode = error.response.status
+    // 可以根据后端返回的状态码进行不同的操
 
     return Promise.reject(error)
 })
